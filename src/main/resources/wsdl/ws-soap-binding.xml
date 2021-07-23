@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
-               version="2.1" jaxb:extensionBindingPrefixes="xjc annox">
-    <jaxws:bindings xmlns:jaxws="http://java.sun.com/xml/ns/jaxws">
-    </jaxws:bindings>
-</jaxb:bindings>
