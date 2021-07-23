@@ -1,0 +1,66 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building kafka-generic-producer 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ kafka-generic-producer ---
+[INFO] Deleting /home/pawel/IdeaProjects/private-projects/kafka-generic-producer/target
+[INFO] 
+[INFO] --- avro-maven-plugin:1.8.2:schema (default) @ kafka-generic-producer ---
+[INFO] 
+[INFO] --- maven-jaxb2-plugin:0.14.0:generate (generate-customer-attributes-facade) @ kafka-generic-producer ---
+[INFO] Latest timestamp of the source resources is [2021-07-22 16:47:10.486], earliest timestamp of the target resources is [2021-07-19 13:27:14.250].
+[INFO] Sources are not up-to-date, XJC will be executed.
+[ERROR] Error while generating code.Location [].
+org.xml.sax.SAXParseException; Failed to write to /home/pawel/IdeaProjects/private-projects/kafka-generic-producer/src/main/java/META-INF/sun-jaxb.episode
+	at com.sun.tools.xjc.addon.episode.PluginImpl.run(PluginImpl.java:207)
+	at com.sun.tools.xjc.model.Model.generateCode(Model.java:292)
+	at org.jvnet.mjiip.v_2_3.XJC23Mojo.generateCode(XJC23Mojo.java:66)
+	at org.jvnet.mjiip.v_2_3.XJC23Mojo.doExecute(XJC23Mojo.java:41)
+	at org.jvnet.mjiip.v_2_3.XJC23Mojo.doExecute(XJC23Mojo.java:28)
+	at org.jvnet.jaxb2.maven2.RawXJC2Mojo.doExecute(RawXJC2Mojo.java:478)
+	at org.jvnet.jaxb2.maven2.RawXJC2Mojo.execute(RawXJC2Mojo.java:320)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:134)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:207)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:116)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:80)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:51)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:307)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:193)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:106)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:863)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:199)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: java.io.FileNotFoundException: /home/pawel/IdeaProjects/private-projects/kafka-generic-producer/src/main/java/META-INF/sun-jaxb.episode (Permission denied)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:187)
+	at com.sun.tools.xjc.addon.episode.PluginImpl.run(PluginImpl.java:169)
+	... 28 more
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.354 s
+[INFO] Finished at: 2021-07-22T16:47:15+02:00
+[INFO] Final Memory: 20M/256M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.jvnet.jaxb2.maven2:maven-jaxb2-plugin:0.14.0:generate (generate-customer-attributes-facade) on project kafka-generic-producer: Failed to compile input schema(s)! Error messages should have been provided. -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
