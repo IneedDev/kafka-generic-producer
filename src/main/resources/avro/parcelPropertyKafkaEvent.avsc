@@ -1,0 +1,81 @@
+{
+  "namespace": "pl.inpost.model",
+  "type": "record",
+  "name": "ParcelPropertyKafkaEvent",
+  "fields": [
+    {
+      "name": "eventHeaders",
+      "type": {
+        "type": "record",
+        "name": "ParcelPropertyEventHeaders",
+        "fields": [
+          {
+            "name": "eventId",
+            "type": {
+              "type": "string",
+              "avro.java.string": "String"
+            }
+          },
+          {
+            "name": "eventDate",
+            "type": {
+              "type": "string",
+              "avro.java.string": "String"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "eventData",
+      "type": {
+        "type": "record",
+        "name": "ParcelPropertyEventData",
+        "fields": [
+          {
+            "name": "parcelNumber",
+            "type": {
+              "type": "string",
+              "avro.java.string": "String"
+            }
+          },
+          {
+            "name": "phoneNumber",
+            "type": {
+              "type": "string",
+              "avro.java.string": "String"
+            }
+          },
+          {
+            "name": "propertyKey",
+            "type": {
+              "type": "enum",
+              "name": "PropertyKeyEnum",
+              "symbols": [
+                "EASY_ACCESS_ZONE_PREFERRED"
+              ]
+            }
+          },
+          {
+            "name": "propertyValue",
+            "type": [
+              "null",
+              {
+                "type": "string",
+                "avro.java.string": "String"
+              }
+            ],
+            "default": null
+          },
+          {
+            "name": "modificationDate",
+            "type": {
+              "type": "long",
+              "logicalType": "timestamp-millis"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

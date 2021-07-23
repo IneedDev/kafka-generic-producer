@@ -1,0 +1,20 @@
+app:
+  name: KAFKA_REDIS_PROFILE_SENDER
+server:
+  port: ${SERVER_PORT:8080}
+kafka:
+  autoResetConfig: ${KAFKA_PROPERTY_AUTO_OFFSET_RESET_CONFIG:earliest}
+  bootstrapServers: ${KAFKA_REDIS_PROFILE_SENDER_GE_BOOTSTRAP_SERVERS:kafka01-t-b-01.easypack24.net:9092,kafka01-t-b-02.easypack24.net:9092,kafka01-t-b-03.easypack24.net:9092,kafka01-t-b-04.easypack24.net:9092}
+  producer:
+    enabled: ${MODE_CUSTOMER_PROFILE:false}
+    topicName: ${CUSTOMER_PROFILE_SENDER_GE_TOPIC_NAME:test-imur-parcel-property_localv2}
+    applicationId: ${CUSTOMER_PROFILE_SENDER_GE_APPLICATION_ID:kafka-redis-profile-sender-parcel}
+    schemaRegistryUrl: ${PARCEL_PARCEL_PROFILE_SENDER_GE_SCHEMA_REGISTRY_URL:http://kafka01-t-schema-registry.easypack24.net}
+szop:
+  url: ${SZOP_URL:http://test-07.szop.pl.d-c002-k8s.easypack24.net:8080}
+  customer-path: ${SZOP_CUSTOMER_PATH:/CustomerFacadeWS}
+  parcel-path: ${SZOP_CUSTOMER_PATH:/ParcelWSService}
+  parcelapi-path: ${SZOP_PARCEL_API_PATH:/PublicApi}
+  customer-attribute-path: ${SZOP_CUSTOMER_ATTRIBUTE_PATH:/CustomerAttributeWS}
+  customer-limit: ${SZOP_CUSTOMER_LIMIT:100}
+
